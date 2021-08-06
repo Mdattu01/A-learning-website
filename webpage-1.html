@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Simple web Development Template</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+            margin: auto;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+            /* width: 70%;
+			display: flex;
+			align-items: center;
+            list-style: none;
+			padding: 26px 30px;
+            text-decoration: none;
+			color: white; */
+		}
+
+		.nav-list {
+			width: 50%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding:36px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+        .nav-list p {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+		.firstsection {
+			background-color: rgb(108, 134, 219);
+			height: 400px;
+		}
+
+		.secondsection {
+			background-color: rgb(93, 145, 113);
+			height: 400px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 20px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+        .courses{
+            background-color: rgb(183, 211, 194);
+			height: 400px;
+            margin: auto;
+            padding: 0px 65px;
+        }
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* .dropdown{
+    background-color: azure;
+} */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #251515;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(243, 243, 243, 0);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(49, 36, 36);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+	</style>
+</head>
+
+<body >
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "md-1.png">
+			</div>
+            <li><a href="#box-main">Home</a></li>
+			<li><a href="#web">Web Technology</a></li>
+			<li><a href="#program">C Programming</a></li>
+			<li><div class="dropdown">
+                  <p class="dropbtn">Courses</p>
+                  <div class="dropdown-content">
+                      <a href="web-develop.html">Web development</a>
+                      <a href="Android-develop.html">Android development</a>
+                      <a href="#">IOS development</a>
+                      <a href="#">Java development</a>
+
+                  </div>
+            </div></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web">Web Technology</h1>
+				<p class="text-small">
+					HTML stands for HyperText Markup Language.
+					It is used to design web pages using a markup
+					language. HTML is the combination of Hypertext
+					and Markup language. Hypertext defines the
+					link between the web pages. A markup language
+					is used to define the text document within tag
+					which defines the structure of web pages.
+					HTML is a markup language that is used by the
+					browser to manipulate text, images, and other
+					content to display it in the required format.
+				</p>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="program">
+					C Programming
+				</h1>
+				<p class="text-small">
+					C is a procedural programming language. It
+					was initially developed by Dennis Ritchie
+					as a system programming language to write
+					operating system. The main features of C
+					language include low-level access to memory,
+					simple set of keywords, and clean style,
+					these features make C language suitable for
+					system programming like operating system or
+					compiler development.
+				</p>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="paras">
+			<h1 class="sectionTag text-big">Java</h1>
+
+			<p class="sectionSubTag text-small">
+				Java has been one of the most popular
+				programming language for many years.
+				Java is Object Oriented. However it is
+				not considered as pure object oriented
+				as it provides support for primitive
+				data types (like int, char, etc) The
+				Java codes are first compiled into byte
+				code (machine independent code). Then
+				the byte code is run on Java Virtual
+				Machine (JVM) regardless of the
+				underlying architecture.
+			</p>
+
+		</div>
+       
+
+		<div class="thumbnail">
+			<img src= "java.png" alt="laptop image">
+		</div>
+	</section>
+    <section>
+        <div class="courses">
+        <h1 class="text-big" id="course">
+            Courses</h1>
+            <p>Web development</p>
+            <p>Android development</p>
+            <p>IOS development</p>
+            <p >Java development</p>
+           
+        </div>
+    </section>
+
+	<footer class="background">
+		<p class="text-footer">
+			Copyright ©-All rights are reserved   &NonBreakingSpace; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ISO  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;901  &nbsp;2008
+		</p>
+    
+       
+
+	</footer>
+</body>
+
+</html>
